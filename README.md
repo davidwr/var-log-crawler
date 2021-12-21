@@ -1,9 +1,11 @@
 # var-log-crawler
 Get the last logs of your /var/log folder
 
+Requirements:
+- Node installed.
+
 Hot to use:
-Rename .env.sample to .env and fill with your values.
-With node installed, just enter the clone folder and run:
+- Rename .env.sample to .env and fill with your values
 - npm install
 - node index.js
 
