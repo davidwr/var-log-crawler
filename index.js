@@ -15,10 +15,12 @@ async function main() {
   })
 
   const command = await ssh.execCommand(
-    'find /var/log -type f -name "*.log"| head -n 30'
+    'find /var/log -type f -mmin -30 -ls -printf "%p\n"'
   )
+
   if (command.code === 0) {
-    const logs = command.stdout.split("\n")
+    const commandRaw = command.stdout.split("\n")
+    const logs = commandRaw.filter((c) => { return c.indexOf(' ') === -1})
     console.log(logs)
 
     console.log('Creating ./logs folder')
