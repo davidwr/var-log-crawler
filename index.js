@@ -15,7 +15,7 @@ async function main() {
   })
 
   const command = await ssh.execCommand(
-    'find /var/log -type f -mmin -30 -ls -printf "%p\n"'
+    'find /var/log -type f -mmin -10 -ls -printf "%p\n";find /opt/smartfox/*/*/logs -type f -mmin -10 -ls -printf "%p\n"'
   )
 
   if (command.code === 0) {
