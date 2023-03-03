@@ -4,7 +4,7 @@ Get the last logs of your /var/log folder
 Requirements:
 - Node installed.
 
-Hot to use:
+How to use it:
 - Rename .env.sample to .env and fill with your values
 - npm install
 - node index.js
